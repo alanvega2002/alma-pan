@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar style="--background: #ff0000;">
+    <ion-title>Login - Alma Pan</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <div class="login-container">
+    <div class="login-form">
+       <!-- Imagen en la parte superior -->
+    <div class="top-image-section">
+      <img src="./assets/img/logo-almapan.jpeg" alt="Imagen de bienvenida" class="top-image"/>
+    </div>
+      <p class="info-text">Inicia sesión o regístrate para poder acceder</p>
+    
+      <ion-item>
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <ion-text color="danger" *ngIf="errorMessage" class="message">{{ errorMessage }}</ion-text>
+      <ion-text color="success" *ngIf="successMessage" class="message">{{ successMessage }}</ion-text>
+
+      <div class="button-container">
+        <ion-button expand="block" color="danger" (click)="login()">Ingresar</ion-button>
+        <ion-button expand="block" fill="clear" color="medium" (click)="navigateToResetPassword()">
+          ¿Olvidaste tu contraseña?
+        </ion-button>
+        <ion-button expand="block" fill="clear" color="medium" (click)="navigateToRegister()">
+          Crear cuenta nueva
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

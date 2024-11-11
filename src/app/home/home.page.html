@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #ff0000;">
+    <ion-title>
+      ALMAPAN Panadería y Pastelería
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Cerrar Sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="alma-pan-background">
+  <ion-header collapse="condense">
+    <ion-toolbar style="--background: #ff0000;">
+      <ion-title size="large">ALMAPAN Panadería y Pastelería</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenedor principal -->
+  <div id="container">
+    <h1>Bienvenido</h1>
+    <p>Si deseas comenzar a trabajar con nosotros, puedes enviarnos tus datos para que nos contactemos contigo. También cuentas con la ubicación de nuestra sucursal si deseas visitar nuestra sede principal.</p>
+
+   
+
+    <!-- Imagen en la parte superior -->
+    <div class="top-image-section">
+      <img src="./assets/img/almapan1.jpeg" alt="Imagen de bienvenida" class="top-image"/>
+    </div>
+
+    <!-- Sección de Mapa -->
+    <div class="map-section">
+      <h2 class="map-title">Ubicación de nuestra sucursal</h2>
+      <img src="./assets/img/direccion1.png" alt="Mapa de ALMA PAN" class="map-image" />
+      <ion-button expand="block" color="danger" href="https://www.google.com/maps/place/ALMA+PAN+Panadería+Y+Pastelería/@-41.4803508,-72.9799215,19z/data=!3m1!4b1!4m6!3m5!1s0x96183b0073fc7c69:0x6b286e1274aed0d7!8m2!3d-41.4803518!4d-72.9792778!16s%2Fg%2F11wbw8lxhc?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+        Ver en Google Maps
+      </ion-button>
+    </div>
+
+    <!-- Botón de contacto -->
+    <ion-button expand="full" routerLink="/contact" color="danger">Contacto</ion-button>
+  </div>
+</ion-content>

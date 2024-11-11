@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar style="--background: #ff0000; color: white;">
+        <ion-title>
+            <a href="/home" style="color: white; text-decoration: none;">ALMAPAN Panadería y Pastelería</a>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <form (ngSubmit)="sendForm($event)" class="contact-form">
+        <ion-item>
+            <ion-label position="floating">Nombre del Cliente</ion-label>
+            <ion-input type="text" name="nombreCliente" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Nombre del Negocio</ion-label>
+            <ion-input type="text" name="nombreNegocio" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Número de Teléfono</ion-label> <!-- Campo adicional -->
+            <ion-input type="tel" name="numeroTelefono" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Kilos de Pan Diarios</ion-label>
+            <ion-input type="number" name="kilosPan" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Ubicación del Negocio</ion-label>
+            <ion-input type="text" name="ubicacionNegocio" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Detalles de Entrega</ion-label>
+            <ion-textarea name="detallesEntrega" required></ion-textarea>
+        </ion-item>
+        
+        <ion-button expand="block" type="submit" color="danger">Enviar</ion-button>
+
+        <!-- Mensajes de éxito o error -->
+        <ion-text *ngIf="message" color="{{messageColor}}">{{message}}</ion-text>
+    </form>
+</ion-content>
